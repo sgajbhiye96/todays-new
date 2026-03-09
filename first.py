@@ -16,4 +16,16 @@ def is_prime(num):
             return False
     return True
 
-print("sir party")
+
+import math
+
+def factorial_builtin(n):
+    if n < 0 or not isinstance(n, int):
+        # The built-in function handles this, but adding a check improves clarity/specific error messages
+        raise ValueError("Factorial is only defined for non-negative integers.")
+    return math.factorial(n)
+
+# Example usage:
+number = 5
+print(f"The factorial of {number} is {factorial_builtin(number)}") 
+# Output: The factorial of 5 is 120
